@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: linear-gradient(to right, #74ebd5, #9face6);
+      margin: 0;
+      padding: 30px;
+    }
+    .weather-box {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      display: inline-block;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+      max-width: 350px;
+      width: 100%;
+    }
+    input {
+      padding: 10px;
+      width: 70%;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 10px 15px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-left: 5px;
+    }
+    button:hover {
+      background: #45a049;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+    .icon {
+      width: 80px;
+      height: 80px;
+      margin-top: 10px;
+    }
+    /* Responsive */
+    @media (max-width: 500px) {
+      .weather-box {
+        padding: 15px;
+      }
+      input {
+        width: 65%;
+      }
+      button {
+        padding: 8px 12px;
+      }
+      .icon {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🌤 Weather App</h1>
+  <div class="weather-box">
+    <input type="text" id="city" placeholder="Enter city name">
+    <button onclick="getWeather()">Get Weather</button>
+    <div id="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
